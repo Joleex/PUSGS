@@ -4187,6 +4187,18 @@ input[type="button"].btn-block {
 .boja{
   color: #fff;
 }
+.dugme{
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.boja1{
+  color: #ff8aaa;
+}
 .custom-range::-ms-fill-upper {
   margin-right: 15px;
   background-color: #dee2e6;
@@ -6703,6 +6715,9 @@ button.bg-primary:hover,
 button.bg-primary:focus {
   background-color: #0062cc !important;
 }
+.bg-color{
+  background-color: #ebe9ff;
+}
 
 .bg-secondary {
   background-color: #6c757d !important;
@@ -8494,7 +8509,9 @@ button.bg-dark:focus {
 .my-n5 {
   margin-top: -3rem !important;
 }
-
+.mt-n6{
+  margin-top: -4.3rem !important;
+}
 .mr-n5,
 .mx-n5 {
   margin-right: -3rem !important;

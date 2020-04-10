@@ -1,22 +1,99 @@
-<form class="header">
-	<div class="form-group row">
-		<div class="col-3">
-			<input class="form-control" type="text" id="name" placeholder="From"
-				formControlName="name">
-		</div>
-
+<form class="navbar bg-color">
+	<div class="row">
 		
-		<div class="col-3">
-			<input class="form-control" type="text" id="name" placeholder="To"
-				formControlName="name">
-		</div>
-		<div class="col-2">
-			<input class="form-control" placeholder="Depart">
-		</div>
-		<div class="col-2">
-			<input class="form-control" placeholder="Return">
+		<div *ngFor="let radio of radios" class="col-2">
+			<input
+			type="radio"
+			name="radioTrip"
+			value="{{radio}}"
+			(change)="radioChangeHandler($event)">
+			
+			<b class="boja1">{{radio}}</b>
+			
 		</div>
 
-		<button type="button" class="bg-light boja">Search</button>
+		<div *ngIf="selectedRadio=='Round-trip'">
+			<div class="form-group row col">
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="From"
+						formControlName="name">
+				</div>
+				
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="To"
+						formControlName="name">
+				</div>
+				<div class="col-2">
+					<input class="form-control" placeholder="Depart">
+				</div>
+				<div class="col-2">
+					<input class="form-control" placeholder="Return">
+				</div>
+		
+			</div>
+		</div>
+	
+		<div *ngIf="selectedRadio=='One way'">
+			<div class="form-group row col">
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="From"
+						formControlName="name">
+				</div>
+				
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="To"
+						formControlName="name">
+				</div>
+				<div class="col-2">
+					<input class="form-control" placeholder="Depart">
+				</div>
+				<div class="col-2">
+					<input class="form-control" placeholder="Return" disabled="text">
+				</div>
+			</div>
+		</div>
+	
+		<div *ngIf="selectedRadio=='Multi-city'">
+			<div class="form-group row col">
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="From"
+						formControlName="name">
+				</div>
+				
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="To"
+						formControlName="name">
+				</div>
+				<div class="col-2">
+					<input class="form-control" placeholder="Depart">
+				</div>
+				<div class="col-2">
+					<input class="form-control" placeholder="Return" disabled>
+				</div>
+			</div>
+
+			<div class="form-group row col">
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="From"
+						formControlName="name">
+				</div>
+				
+				<div class="col-4">
+					<input class="form-control" type="text" id="name" placeholder="To"
+						formControlName="name">
+				</div>
+				<div class="col-2">
+					<input class="form-control" placeholder="Depart">
+				</div>
+				<div class="col-2"> 
+					<input class="form-control" placeholder="Return" disabled>
+				</div>
+			</div>
+			<button type="button" class="mt-n2 bg-light boja dugme col-3 ml-3">+ Add another flight</button>
+		</div>
+		
+		
 	</div>
+	<button type="button" class=" mb-sm-0 ml-auto mt-n6 bg-light boja dugme col-1">Search</button>
+	
 </form>
