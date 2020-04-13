@@ -25,7 +25,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/bootstrap.css"
+              "src/assets/css/bootstrap.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
             ],
             "scripts": []
           },
@@ -90,7 +91,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/bootstrap.css"
+              "src/assets/css/bootstrap.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
             ],
             "scripts": []
           }

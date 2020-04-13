@@ -5896,7 +5896,7 @@ a.close.disabled {
   display: none;
 }
 
-.toast-header {
+.toast-header-b {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -6769,13 +6769,13 @@ button.bg-danger:focus {
   background-color: #bd2130 !important;
 }
 
-.bg-light {
+.bg-light-b {
   background-color: #ff99aa !important;
 }
 
-a.bg-light:hover, a.bg-light:focus,
-button.bg-light:hover,
-button.bg-light:focus {
+a.bg-light-b:hover, a.bg-light-b:focus,
+button.bg-light-b:hover,
+button.bg-light-b:focus {
   background-color: #dae0e5 !important;
 }
 

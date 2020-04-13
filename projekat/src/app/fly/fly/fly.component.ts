@@ -9,20 +9,26 @@ import { CarComponent } from '../car/car.component';
   styleUrls: ['./fly.component.css']
 })
 
-
-export class FlyComponent implements OnInit {
+  
+export class FlyComponent implements OnInit {   
+ 
+  minDate: Date;
   radioSelected: string;
-  selectedRadio: string='Round-trip';
+  public selectedRadio: string;
   radios: any =[
     'Round-trip',
     'One way',
     'Multi-city'
   ]
-  
+
   radioChangeHandler(event:any){
     this.selectedRadio=event.target.value;
   }
-  constructor() {
+ 
+  constructor() { 
+    this.selectedRadio="Round-trip";
+    this.minDate=new Date();
+    this.minDate.getDate();
   }
 
   ngOnInit(): void {
