@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Time } from '@angular/common';
 
 @Component({
   selector: 'app-car',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./car.component.css'],
 })
 export class CarComponent implements OnInit {
- 
-  constructor() {}
+  minDate: Date;
+  constructor() { 
+    this.minDate=new Date();
+    this.minDate.getDate();
+  }
   ngOnInit(): void {
   }
 
