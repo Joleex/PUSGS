@@ -1,1 +1,56 @@
-<p>fly-car works!</p>
+<form class="navbar bg-color">
+    <div class="col">
+        <label class="boja1">Fly</label>
+<div class="form-group row col">
+    <div class="col-3">
+        <input class="form-control" type="text" id="name" placeholder="From"
+            formControlName="name">
+    </div>
+    
+    <div class="col-3">
+        <input class="form-control" type="text" id="name" placeholder="To"
+            formControlName="name">
+    </div>
+    <div class="col-3">
+        <input class="form-control" placeholder="Depart"
+        bsDatepicker
+        [bsConfig]="{ isAnimated: true}"
+        [bsConfig]="{containerClass: 'theme-default'}"
+        [minDate]="minDate">
+    </div>
+</div>
+<label class="boja1">Car</label>
+<div class="form-group row col">
+    <div class="col-2">
+        <input class="form-control" type="text" id="name" placeholder="Pick-up location"
+            formControlName="name">
+    </div>
+    
+    <div class="col-2">
+        <input class="form-control" type="text" id="name" placeholder="Drop-off location"
+            formControlName="name">
+    </div>
+    <div class="col-2">
+        <input class="form-control" placeholder="Pick-up date"
+        bsDatepicker
+        [bsConfig]="{ isAnimated: true}"
+        [bsConfig]="{containerClass: 'theme-default'}"
+        [minDate]="minDate">
+    </div>
+    <div class="col-1">
+        <input class="form-control" type="time">
+    </div>
+    <div class="col-2">
+        <input class="form-control" placeholder="Drop-off date"
+        bsDatepicker
+        [bsConfig]="{ isAnimated: true}"
+        [bsConfig]="{containerClass: 'theme-default'}"
+        [minDate]="minDate">
+    </div>
+    <div class="col-1">
+        <input class="form-control" type="time">
+    </div>
+    
+</div><button type="button" class=" mb-sm-0 ml-auto bg-light-b boja dugme col-1">Search</button>
+</div>
+</form>

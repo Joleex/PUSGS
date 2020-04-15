@@ -2192,7 +2192,10 @@ textarea.form-control {
   margin-right: -5px;
   margin-left: -5px;
 }
-
+.slika{
+  height: calc(10em + 1rem + 2px);
+  width: calc(10em + 1rem + 2px);
+}
 .form-row > .col,
 .form-row > [class*="col-"] {
   padding-right: 5px;

@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BodyComponent } from './core/body/body.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     NavbarComponent,
     FlyComponent,
     FlyCarComponent,
-    CarComponent
+    CarComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

@@ -9,4 +9,5 @@ export const routes :Routes = [
 	{path: 'fly/car', component: CarComponent},
 	{path: 'fly/fly-car', component: FlyCarComponent},
 	{path: '', redirectTo: '/fly', pathMatch: 'full'}
+	
 ];

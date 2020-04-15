@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fly-car.component.css']
 })
 export class FlyCarComponent implements OnInit {
-  
+  minDate: Date;
   constructor() { 
+    this.minDate=new Date();
+    this.minDate.getDate();
   }
 
   ngOnInit(): void {
