@@ -1740,7 +1740,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #212529;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -2091,7 +2091,7 @@ pre code {
 }
 
 .form-control::placeholder {
-  color: #6c757d;
+  color: #c6c3d8;
   opacity: 1;
 }
 
@@ -2193,8 +2193,8 @@ textarea.form-control {
   margin-left: -5px;
 }
 .slika{
-  height: calc(10em + 1rem + 2px);
-  width: calc(10em + 1rem + 2px);
+  height: calc(12em + 1rem + 2px);
+  width: calc(12em + 1rem + 2px);
 }
 .form-row > .col,
 .form-row > [class*="col-"] {

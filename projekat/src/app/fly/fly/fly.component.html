@@ -13,37 +13,50 @@
 
 		<div *ngIf="selectedRadio=='Round-trip'">
 			<div class="form-group row col">
-				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="From"
+				<div class="col-3">
+					<input class="form-control" type="text" id="flyFromFilter" placeholder="From"
 						formControlName="name">
 				</div>
 				
-				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="To"
+				<div class="col-3">
+					<input class="form-control" type="text" id="flyToFilter" placeholder="To"
 						formControlName="name">
 				</div>
-				<div class="col-4">
+				<div class="col-3">
 					<input 
 					type="text"
+					id="flyDateFilter"
 					class="form-control" 
-					placeholder="Depart-Return" 
-					bsDaterangepicker
+					placeholder="Depart" 
+					bsDatepicker
 					[minDate]="minDate"
 					[bsConfig]="{containerClass:'theme-default'}">
 				</div>
 		
+				
+				<div class="col-3">
+					<input 
+					type="text"
+					id="flyDateReturnFilter"
+					class="form-control" 
+					placeholder="Return" 
+					bsDatepicker
+					[minDate]="minDate"
+					[bsConfig]="{containerClass:'theme-default'}">
+				</div>
+
 			</div>
 		</div>
 	
 		<div *ngIf="selectedRadio=='One way'">
 			<div class="form-group row col">
 				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="From"
+					<input class="form-control" type="text" id="flyFromFilter" placeholder="From"
 						formControlName="name">
 				</div>
 				
 				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="To"
+					<input class="form-control" type="text" id="flyToFilter" placeholder="To"
 						formControlName="name">
 				</div>
 				<div class="col-4">
@@ -59,12 +72,12 @@
 		<div *ngIf="selectedRadio=='Multi-city'">
 			<div class="form-group row col">
 				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="From"
+					<input class="form-control" type="text" id="flyFromFilter" placeholder="From"
 						formControlName="name">
 				</div>
 				
 				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="To"
+					<input class="form-control" type="text" id="flyToFilter" placeholder="To"
 						formControlName="name">
 				</div>
 				<div class="col-4">
@@ -77,12 +90,12 @@
 			</div>
 			<div class="form-group row col">
 				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="From"
+					<input class="form-control" type="text" id="flyFromFilter" placeholder="From"
 						formControlName="name">
 				</div>
 				
 				<div class="col-4">
-					<input class="form-control" type="text" id="name" placeholder="To"
+					<input class="form-control" type="text" id="flyToFilter" placeholder="To"
 						formControlName="name">
 				</div>
 				<div class="col-4">
@@ -95,9 +108,41 @@
 			</div>
 			<button type="button" class="mt-n2 bg-light-b boja dugme col-3 ml-3">+ Add another flight</button>
 		</div>
-		
-		
 	</div>
-	<button type="button" class=" mb-sm-0 ml-auto mt-n6 bg-light-b boja dugme col-1">Search</button>
+
+	<button type="button" class="bg-light-b boja dugme col-1 ml-auto " (click)="filterFlys()">Search</button>
+
+	<div *ngIf="filteredFlys" class="row col ml-auto mr-auto">
+		<hr/>
+		<h5 class="boja1 row col mr-auto" > Select your flight </h5>
+		<table class="table table-hover">
+			<thead class="boja bg-light-b">
+				<tr>
+					<th scope="col">From</th>
+					<th scope="col">To</th>
+					<th scope="col">Date</th>
+					<th scope="col">Time of Departures</th>
+					<th scope="col">Time of Arrivals</th>
+					<th scope="col">Namber of connection</th>
+					<th scope="col">Length of fly</th>
+					<th scope="col">Price</th>
+				</tr>
+			</thead>
+			<tbody class="boja1">
+				<tr *ngFor="let fly of filteredFlys">
+					<td>{{fly.from}}</td>
+					<td>{{fly.to}}</td>
+					<td>{{fly.date}}</td>
+					<td>{{fly.timeOfDepartures}}</td>
+					<td>{{fly.timeOfArrivals}}</td>
+					<td>{{fly.numberOfConnection}}</td>
+					<td>{{fly.lengthOfFly}}</td>
+					<td>{{fly.price}} €
+						<button type="button" class="bg-light-b boja dugme">Select</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 	
 </form>
